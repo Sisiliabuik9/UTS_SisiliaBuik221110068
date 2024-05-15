@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rental Mobil Online</title>
+    <style>
+        body {
+            background-color: #f2f2f2; /* Background warna abu-abu */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .nav-container {
+            width: 100%; /* Membuat kontainer navigasi selebar halaman */
+            background-color: moccasin; /* Warna latar belakang untuk kontainer navigasi */
+            border: 2px solid whitesmoke; /* Menambahkan garis warna hijau di sekitar menu navigasi */
+            box-sizing: border-box; /* Memastikan padding tidak menambah lebar elemen */
+            position: absolute; /* Agar elemen ini bisa ditaruh di posisi yang diinginkan */
+            top: 0; /* Mengubah posisi navigasi menu sedikit ke bawah */
+            right: 0; /* Menempatkan navigasi di sebelah kanan */
+            padding: 10px 20px; /* Memberikan ruang di dalam garis, atas dan bawah */
+            text-align: right; /* Mengatur teks dan link navigasi ke kanan */
+        }
+        nav a {
+            color: blue; /* Warna teks */
+            text-decoration: none; /* Menghapus garis bawah dari tautan */
+            margin-left: 20px; /* Jarak antara setiap tautan */
+            font-weight: bold; /* Membuat teks menjadi tebal (bold) */
+        }
+        section {
+            padding: 20px;
+        }
+        form {
+            background-color: #fff; /* Warna latar belakang putih */
+            padding: 20px;
+            margin: auto; /* Pusatkan form */
+            width: 50%; /* Lebar form */
+        }
+        label {
+            display: block; /* Membuat label memenuhi lebar form */
+            margin-bottom: 10px; /* Jarak antara label */
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        select,
+        textarea {
+            width: calc(100% - 10px); /* Lebar input minus margin */
+            padding: 5px; /* Padding di sekitar input */
+            margin-bottom: 10px; /* Jarak antara input */
+        }
+        input[type="submit"] {
+            background-color: #007bff; /* Warna latar belakang tombol */
+            color: #fff; /* Warna teks tombol */
+            border: none; /* Hapus border tombol */
+            padding: 10px 20px; /* Padding di sekitar teks tombol */
+            cursor: pointer; /* Tampilkan cursor tangan saat diarahkan ke tombol */
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3; /* Warna latar belakang tombol saat dihover */
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav-container">
+        <a href="./index.html">Beranda</a>
+        <a href="./Mobil.html">Mobil</a>
+        <a href="./Pemesanan.html">Pemesanan</a>
+        <a href="./Kontak.html">Kontak</a>
+    </nav>
+
+    <section id="pemesanan">
+        <h1 style="text-align: left;">Formulir Pemesanan</h1>
+        <form action="submit-pemesanan.php" method="post">
+            <label for="nama">Nama Lengkap:</label>
+            <input type="text" id="nama" name="nama" required><br>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+            
+            <label for="telepon">Nomor Telepon:</label>
+            <input type="tel" id="telepon" name="telepon" required><br>
+            
+            <label for="mobil">Pilih Mobil:</label>
+            <select id="mobil" name="mobil">
+                <option value="suv">SUV</option>
+                <option value="sedan">Sedan</option>
+                <option value="minivan">Minivan</option>
+                <option value="sport">Mobil sport</option>
+                <option value="travel">Travel</option>
+                <option value="bus">Bus</option>
+            </select><br>
+            
+            <label for="tanggal">Tanggal Pemesanan:</label>
+            <input type="date" id="tanggal" name="tanggal" required><br>
+            
+            <label for="pesan">Pesan Tambahan:</label><br>
+            <textarea id="pesan" name="pesan" rows="4" cols="50"></textarea><br>
+            
+            <input type="submit" value="Pesan Sekarang">
+        </form>
+    </section>
+</body>
+</html>
